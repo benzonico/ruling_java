@@ -1,0 +1,7 @@
+.idea/
+*.iml
+target/
+pom.xml.releaseBackup
+release.properties
+snapshots
+coverage-error.log
