@@ -1,0 +1,12 @@
+{
+  "rule": {
+    "key": "squid:AvoidCycle",
+    "name": "Avoid cycle",
+    "description": "Avoid cycle between packages",
+    "language": "xoo",
+    "noteRaw": "*Extended rule description*",
+    "noteHtml": "<em>Extended rule description</em>",
+    "tags": [],
+    "sysTags": []
+  }
+}
