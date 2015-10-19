@@ -16,6 +16,27 @@
 
   <dependencies>
     <dependency>
+      <groupId>org.codehaus.woodstox</groupId>
+      <artifactId>stax2-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.staxmate</groupId>
+      <artifactId>staxmate</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.tinkerpop.blueprints</groupId>
+      <artifactId>blueprints-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.transaction</groupId>
+      <artifactId>jta</artifactId>
+      <version>1.1</version>
+    </dependency>
+    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
     </dependency>
@@ -58,7 +79,7 @@
     <dependency>
       <groupId>dom4j</groupId>
       <artifactId>dom4j</artifactId>
-      <version>1.6.1</version>
+	  <version>1.6.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.code.gson</groupId>
@@ -75,18 +96,80 @@
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-colorizer</artifactId>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-colorizer-5.1.2.jar</systemPath>
     </dependency>
+    <dependency>
+      <groupId>org.codehaus.sonar</groupId>
+      <artifactId>sonar-check-api</artifactId>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-check-api-5.1.2.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>net.jpountz.lz4</groupId>
+      <artifactId>lz4</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-classworlds</artifactId>
+      </dependency>
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-core</artifactId>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-core-5.1.2.jar</systemPath>
     </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-annotations</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-commons-annotations</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <exclusions>
+          <exclusion>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <exclusions>
+          <exclusion>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-batch-protocol</artifactId>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-batch-protocol-5.1.2.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
     </dependency>
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-deprecated</artifactId>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-deprecated-5.1.2.jar</systemPath>
       <exclusions>
         <exclusion>
           <groupId>org.apache.maven</groupId>
@@ -97,19 +180,27 @@
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-home</artifactId>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-home-5.1.2.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-java-api</artifactId>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-java-api-5.1.2.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-markdown</artifactId>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-markdown-5.1.2.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-process</artifactId>
-      <version>${project.version}</version>
+	  <version>${project.version}</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-process-5.1.2.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
@@ -118,7 +209,8 @@
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-plugin-api</artifactId>
-      <version>${project.version}</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-plugin-api-5.1.2.jar</systemPath>
       <exclusions>
         <exclusion>
           <!-- not used at runtime -->
@@ -176,10 +268,6 @@
       <artifactId>jfreechart</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-    </dependency>
-    <dependency>
       <groupId>commons-dbcp</groupId>
       <artifactId>commons-dbcp</artifactId>
     </dependency>
@@ -200,14 +288,16 @@
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-core</artifactId>
-      <version>${project.version}</version>
       <type>test-jar</type>
-      <scope>test</scope>
+	  <version>${project.version}</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-core-5.1.2-tests.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-testing-harness</artifactId>
-      <scope>test</scope>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-testing-harness-5.1.2.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.dbunit</groupId>
@@ -237,9 +327,49 @@
     <dependency>
       <groupId>org.codehaus.sonar</groupId>
       <artifactId>sonar-search</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
+	  <version>${project.version}</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sonar-search-5.1.2.jar</systemPath>
     </dependency>
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <exclusions>
+          <exclusion>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>com.google.code.bean-matchers</groupId>
+        <artifactId>bean-matchers</artifactId>
+        <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest-all</artifactId>
+      </dependency>
+      <dependency>
+        <groupId>com.googlecode.json-simple</groupId>
+        <artifactId>json-simple</artifactId>
+        <exclusions>
+          <exclusion>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
   </dependencies>
 
   <build>
