@@ -1,0 +1,19 @@
+{
+  "organization": {
+    "canAdmin": true,
+    "canProvisionProjects": true,
+    "canDelete": false,
+    "pages": [
+      {
+        "key": "my-plugin/org-page",
+        "name": "Organization page"
+      }
+    ],
+    "adminPages": [
+      {
+        "key": "my-plugin/org-admin-page",
+        "name": "Organization admin page"
+      }
+    ]
+  }
+}

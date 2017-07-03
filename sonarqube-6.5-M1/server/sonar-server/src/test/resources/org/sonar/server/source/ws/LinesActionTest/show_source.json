@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "line": 1,
+      "code": "<p>SOURCE_1</p>",
+      "scmAuthor": "AUTHOR_1",
+      "scmRevision": "REVISION_1",
+      "scmDate": "1974-10-03T03:40:00+0100",
+      "lineHits": 1,
+      "conditions": 2,
+      "coveredConditions": 3,
+      "duplicated": true
+    },
+    {
+      "line": 2,
+      "code": "<p>SOURCE_2</p>",
+      "scmAuthor": "AUTHOR_2",
+      "scmRevision": "REVISION_2",
+      "scmDate": "1974-10-03T03:40:00+0100",
+      "lineHits": 2,
+      "conditions": 3,
+      "coveredConditions": 4,
+      "duplicated": true
+    },
+    {
+      "line": 3,
+      "code": "<p>SOURCE_3</p>",
+      "scmAuthor": "AUTHOR_3",
+      "scmRevision": "REVISION_3",
+      "scmDate": "1974-10-03T03:40:00+0100",
+      "lineHits": 3,
+      "conditions": 4,
+      "coveredConditions": 5,
+      "duplicated": true
+    }
+  ]
+}

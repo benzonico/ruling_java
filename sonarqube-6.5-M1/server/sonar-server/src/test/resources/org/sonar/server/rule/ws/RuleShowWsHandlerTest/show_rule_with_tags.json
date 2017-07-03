@@ -1,0 +1,10 @@
+{
+  "rule": {
+    "key": "squid:AvoidCycle",
+    "name": "Avoid cycle",
+    "description": "Avoid cycle between packages",
+    "language": "xoo",
+    "tags": ["complexity"],
+    "sysTags": ["security"]
+  }
+}

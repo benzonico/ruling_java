@@ -1,0 +1,97 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2017 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+package org.sonar.server.computation.dbcleaner;
+
+import java.util.Collection;
+import org.sonar.api.CoreProperties;
+import org.sonar.api.ce.ComputeEngineSide;
+import org.sonar.api.config.Settings;
+import org.sonar.api.server.ServerSide;
+import org.sonar.api.utils.TimeUtils;
+import org.sonar.api.utils.log.Logger;
+import org.sonar.api.utils.log.Loggers;
+import org.sonar.db.DbSession;
+import org.sonar.db.purge.IdUuidPair;
+import org.sonar.db.purge.PurgeConfiguration;
+import org.sonar.db.purge.PurgeDao;
+import org.sonar.db.purge.PurgeListener;
+import org.sonar.db.purge.PurgeProfiler;
+import org.sonar.db.purge.period.DefaultPeriodCleaner;
+
+import static org.sonar.db.purge.PurgeConfiguration.newDefaultPurgeConfiguration;
+
+@ServerSide
+@ComputeEngineSide
+public class ProjectCleaner {
+  private static final Logger LOG = Loggers.get(ProjectCleaner.class);
+
+  private final PurgeProfiler profiler;
+  private final PurgeListener purgeListener;
+  private final PurgeDao purgeDao;
+  private final DefaultPeriodCleaner periodCleaner;
+
+  public ProjectCleaner(PurgeDao purgeDao, DefaultPeriodCleaner periodCleaner, PurgeProfiler profiler, PurgeListener purgeListener) {
+    this.purgeDao = purgeDao;
+    this.periodCleaner = periodCleaner;
+    this.profiler = profiler;
+    this.purgeListener = purgeListener;
+  }
+
+  public ProjectCleaner purge(DbSession session, IdUuidPair idUuidPair, Settings projectSettings, Collection<String> disabledComponentUuids) {
+    long start = System.currentTimeMillis();
+    profiler.reset();
+
+    PurgeConfiguration configuration = newDefaultPurgeConfiguration(projectSettings, idUuidPair, disabledComponentUuids);
+
+    cleanHistoricalData(session, configuration.rootProjectIdUuid().getUuid(), projectSettings);
+    doPurge(session, configuration);
+
+    session.commit();
+    logProfiling(start, projectSettings);
+    return this;
+  }
+
+  private void logProfiling(long start, Settings settings) {
+    if (settings.getBoolean(CoreProperties.PROFILING_LOG_PROPERTY)) {
+      long duration = System.currentTimeMillis() - start;
+      LOG.info("\n -------- Profiling for purge: " + TimeUtils.formatDuration(duration) + " --------\n");
+      profiler.dump(duration, LOG);
+      LOG.info("\n -------- End of profiling for purge --------\n");
+    }
+  }
+
+  private void cleanHistoricalData(DbSession session, String rootUuid, Settings settings) {
+    try {
+      periodCleaner.clean(session, rootUuid, settings);
+    } catch (Exception e) {
+      // purge errors must no fail the batch
+      LOG.error("Fail to clean historical data [uuid=" + rootUuid + "]", e);
+    }
+  }
+
+  private void doPurge(DbSession session, PurgeConfiguration configuration) {
+    try {
+      purgeDao.purge(session, configuration, purgeListener, profiler);
+    } catch (Exception e) {
+      // purge errors must no fail the report analysis
+      LOG.error("Fail to purge data [id=" + configuration.rootProjectIdUuid().getId() + "]", e);
+    }
+  }
+}

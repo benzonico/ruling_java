@@ -1,0 +1,37 @@
+{
+  "issues": [
+    {
+      "key": "82fd47d4-b650-4037-80bc-7b112bd4eac2",
+      "component": "FK1",
+      "project": "PK1",
+      "rule": "xoo:x1"
+    }
+  ],
+  "components": [
+    { "key": "PK1" },
+    { "key": "MK1" },
+    { "key": "SUBMK1" },
+    { "key": "SUBMK2" },
+    { "key": "SUBMK3" },
+    { "key": "FK1" }
+  ],
+  "facets": [
+    {
+      "property": "moduleUuids",
+      "values": [
+        {
+          "val": "SUBM1",
+          "count": 1
+        },
+        {
+          "val": "SUBM2",
+          "count": 1
+        },
+        {
+          "val": "SUBM3",
+          "count": 0
+        }
+      ]
+    }
+  ]
+}

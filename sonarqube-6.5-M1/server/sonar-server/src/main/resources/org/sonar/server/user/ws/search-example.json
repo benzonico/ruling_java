@@ -1,0 +1,42 @@
+{
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 50,
+    "total": 2
+  },
+  "users": [
+    {
+      "login": "fmallet",
+      "name": "Freddy Mallet",
+      "active": true,
+      "email": "f@m.com",
+      "groups": [
+        "sonar-administrators",
+        "sonar-users"
+      ],
+      "tokensCount": 1,
+      "local": true,
+      "externalIdentity": "fmallet",
+      "externalProvider": "sonarqube",
+      "avatar": "2f9dff586d3f74f825b059e3798a3bbb"
+    },
+    {
+      "login": "sbrandhof",
+      "name": "Simon",
+      "active": true,
+      "email": "s.brandhof@company.tld",
+      "scmAccounts": [
+        "simon.brandhof",
+        "s.brandhof@company.tld"
+      ],
+      "groups": [
+        "sonar-users"
+      ],
+      "tokensCount": 3,
+      "local": false,
+      "externalIdentity": "sbrandhof@ldap.com",
+      "externalProvider": "LDAP",
+      "avatar": "3930ad855bc7fe48db8e9a663174cdd3"
+    }
+  ]
+}

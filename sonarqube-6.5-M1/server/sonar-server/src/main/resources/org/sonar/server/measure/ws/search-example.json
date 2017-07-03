@@ -1,0 +1,76 @@
+{
+  "measures": [
+    {
+      "metric": "complexity",
+      "value": "12",
+      "component": "MY_PROJECT_1"
+    },
+    {
+      "metric": "complexity",
+      "value": "35",
+      "periods": [
+        {
+          "index": 1,
+          "value": "0"
+        }
+      ],
+      "component": "MY_PROJECT_2"
+    },
+    {
+      "metric": "complexity",
+      "value": "42",
+      "component": "MY_PROJECT_3"
+    },
+    {
+      "metric": "ncloc",
+      "value": "114",
+      "component": "MY_PROJECT_1"
+    },
+    {
+      "metric": "ncloc",
+      "value": "217",
+      "periods": [
+        {
+          "index": 1,
+          "value": "0"
+        }
+      ],
+      "component": "MY_PROJECT_2"
+    },
+    {
+      "metric": "ncloc",
+      "value": "1984",
+      "component": "MY_PROJECT_3"
+    },
+    {
+      "metric": "new_violations",
+      "periods": [
+        {
+          "index": 1,
+          "value": "25"
+        }
+      ],
+      "component": "MY_PROJECT_1"
+    },
+    {
+      "metric": "new_violations",
+      "periods": [
+        {
+          "index": 1,
+          "value": "25"
+        }
+      ],
+      "component": "MY_PROJECT_2"
+    },
+    {
+      "metric": "new_violations",
+      "periods": [
+        {
+          "index": 1,
+          "value": "255"
+        }
+      ],
+      "component": "MY_PROJECT_3"
+    }
+  ]
+}

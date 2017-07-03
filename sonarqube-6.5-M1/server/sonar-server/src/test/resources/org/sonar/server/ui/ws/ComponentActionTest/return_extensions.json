@@ -1,0 +1,12 @@
+{
+  "extensions": [
+    {
+      "key": "my_plugin/first_page",
+      "name": "First Page"
+    },
+    {
+      "key": "my_plugin/second_page",
+      "name": "Second Page"
+    }
+  ]
+}

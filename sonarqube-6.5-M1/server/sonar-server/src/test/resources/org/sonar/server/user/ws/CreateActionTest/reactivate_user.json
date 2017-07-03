@@ -1,0 +1,15 @@
+{
+  "user": {
+    "login": "john",
+    "name": "John",
+    "email": "john@email.com",
+    "scmAccounts": ["jn"],
+    "active": true,
+    "local": true
+  },
+  "infos": [
+    {
+      "msg": "The user 'john' has been reactivated"
+    }
+  ]
+}

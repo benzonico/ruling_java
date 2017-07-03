@@ -1,0 +1,17 @@
+{
+  "organization": "my-org",
+  "key": "polop",
+  "id": "abcd",
+  "name": "Polop",
+  "description": "test project",
+  "isFavorite": false,
+  "analysisDate": "2015-04-22T11:44:00+0200",
+  "version": "3.14",
+  "breadcrumbs": [
+    {
+      "key": "polop",
+      "name": "Polop",
+      "qualifier": "TRK"
+    }
+  ]
+}

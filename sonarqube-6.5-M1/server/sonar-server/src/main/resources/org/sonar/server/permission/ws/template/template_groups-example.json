@@ -1,0 +1,30 @@
+{
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 20,
+    "total": 3
+  },
+  "groups": [
+    {
+      "name": "Anyone",
+      "permissions": [
+        "issueadmin",
+        "user"
+      ]
+    },
+    {
+      "name": "sonar-administrators",
+      "description": "System administrators",
+      "permissions": [
+        "issueadmin"
+      ]
+    },
+    {
+      "name": "sonar-users",
+      "description": "Any new users created will automatically join this group",
+      "permissions": [
+        "issueadmin"
+      ]
+    }
+  ]
+}

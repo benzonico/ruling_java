@@ -1,0 +1,22 @@
+{
+  "configuration": {
+    "showSettings": false,
+    "showQualityProfiles": true,
+    "showQualityGates": true,
+    "showManualMeasures": true,
+    "showLinks": true,
+    "showPermissions": false,
+    "showHistory": false,
+    "showUpdateKey": false,
+    "extensions": [
+      {
+        "key": "my_plugin/first_page",
+        "name": "First Page"
+      },
+      {
+        "key": "my_plugin/second_page",
+        "name": "Second Page"
+      }
+    ]
+  }
+}
