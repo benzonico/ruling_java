@@ -1,6 +1,0 @@
-/*
- * Header
- */
-
-public class HelloWorld {
-}
