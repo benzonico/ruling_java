@@ -1,4 +1,0 @@
----
-layout: default
----
-Hello World

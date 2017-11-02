@@ -1,6 +1,0 @@
-Hello
-[[#if this.terminal]]
-  [[name]]
-[[else]]
-  [[> partialWithLoop name]]
-[[/if]]

@@ -1,9 +1,0 @@
-{
-  "languages": [
-    {"key": "c", "name": "C"},
-    {"key": "cpp", "name": "C++"},
-    {"key": "java", "name": "Java"},
-    {"key": "js", "name": "JavaScript"},
-    {"key": "python", "name": "Python"}
-  ]
-}

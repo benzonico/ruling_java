@@ -1,8 +1,0 @@
-{
-  "languages": [
-    {"key": "ac", "name": "ArnoldC"},
-    {"key": "lol", "name": "LOLCODE"},
-    {"key": "ook", "name": "Ook!"},
-    {"key": "ws", "name": "Whitespace"}
-  ]
-}

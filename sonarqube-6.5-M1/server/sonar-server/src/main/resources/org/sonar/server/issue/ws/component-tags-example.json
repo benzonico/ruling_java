@@ -1,7 +1,0 @@
-{
-  "tags": [
-    { key: "convention", value: 42 },
-    { key: "cwe", value: 12 },
-    { key: "security", value: 5 }
-  ]
-}

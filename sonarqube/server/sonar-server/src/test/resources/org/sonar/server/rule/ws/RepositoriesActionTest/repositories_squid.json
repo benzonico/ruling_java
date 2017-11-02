@@ -1,9 +1,0 @@
-{
-  "repositories": [
-    {
-      "key": "squid",
-      "name": "SonarQube",
-      "language": "ws"
-    }
-  ]
-}
