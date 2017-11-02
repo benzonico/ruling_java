@@ -1,0 +1,19 @@
+{
+  "edit": false,
+  "metrics": [
+    {
+      "key": "accessors",
+      "name": "Accessors",
+      "type": "INT",
+      "domain": "Size",
+      "hidden": true
+    },
+    {
+      "key": "blocker_remediation_cost",
+      "name": "Blocker Technical Debt",
+      "type": "WORK_DUR",
+      "domain": "SQALE",
+      "hidden": false
+    }
+  ]
+}

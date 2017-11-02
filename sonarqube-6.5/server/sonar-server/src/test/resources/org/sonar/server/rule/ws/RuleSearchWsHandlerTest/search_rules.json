@@ -1,0 +1,16 @@
+{"more": false, "total": 1,
+  "results": [
+    {
+      "key": "squid:AvoidCycle",
+      "repository": "squid",
+      "name": "Avoid cycle",
+      "language": "Java",
+      "status": "READY",
+      "debtCharacteristic": "REUSABILITY",
+      "debtSubCharacteristic": "MODULARITY",
+      "debtRemediationFunction": "LINEAR_OFFSET",
+      "debtRemediationCoefficient": "1h",
+      "debtRemediationOffset": "15min"
+    }
+  ]
+}

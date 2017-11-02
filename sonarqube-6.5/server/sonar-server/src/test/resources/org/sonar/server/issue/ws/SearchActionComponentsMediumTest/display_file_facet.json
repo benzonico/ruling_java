@@ -1,0 +1,37 @@
+{
+  "total": 1,
+  "p": 1,
+  "issues": [
+    {
+      "key": "82fd47d4-b650-4037-80bc-7b112bd4eac2",
+      "component": "FK1",
+      "project": "PK1",
+      "rule": "xoo:x1"
+    }
+  ],
+  "components": [
+    { "key": "PK1" },
+    { "key": "FK1" },
+    { "key": "FK2" },
+    { "key": "FK3" }
+  ],
+  "facets": [
+    {
+      "property": "fileUuids",
+      "values": [
+        {
+          "val": "F1",
+          "count": 1
+        },
+        {
+          "val": "F2",
+          "count": 1
+        },
+        {
+          "val": "F3",
+          "count": 0
+        }
+      ]
+    }
+  ]
+}

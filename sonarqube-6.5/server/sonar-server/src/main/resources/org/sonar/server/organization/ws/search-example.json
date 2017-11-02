@@ -1,0 +1,22 @@
+{
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 25,
+    "total": 2
+  },
+  "organizations": [
+    {
+      "key": "foo-company",
+      "name": "Foo Company",
+      "guarded": true
+    },
+    {
+      "key": "bar-company",
+      "name": "Bar Company",
+      "description": "The Bar company produces quality software too.",
+      "url": "https://www.bar.com",
+      "avatar": "https://www.bar.com/logo.png",
+      "guarded": false
+    }
+  ]
+}

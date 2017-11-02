@@ -1,0 +1,41 @@
+{
+  "issues": [
+    {
+      "organization": "my-org-2",
+      "key": "7b112bd4-b650-4037-80bc-82fd47d4eac2",
+      "component": "FILE_KEY",
+      "rule": "xoo:x1",
+      "status": "OPEN",
+      "severity": "MAJOR",
+      "effort": "10min",
+      "assignee": "alice"
+    }
+  ],
+  "facets": [
+    {
+      "property": "assignees",
+      "values": [
+        {
+          "val": "john-bob.polop",
+          "count": 1
+        },
+        {
+          "val": "alice",
+          "count": 1
+        },
+        {
+          "val": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "property": "assigned_to_me",
+      "values": [
+        {
+          "val": "john-bob.polop",
+          "count": 1
+        }
+      ]
+    }
+  ]}

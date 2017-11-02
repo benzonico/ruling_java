@@ -1,0 +1,42 @@
+{
+  "permissions": [
+    {
+      "key": "admin",
+      "name": "Administer System",
+      "description": "Ability to perform all administration functions for the instance: global configuration and personalization of default dashboards.",
+      "usersCount": 0,
+      "groupsCount": 1
+    },
+    {
+      "key": "profileadmin",
+      "name": "Administer Quality Profiles",
+      "description": "Ability to perform any action on the quality profiles.",
+      "usersCount": 2,
+      "groupsCount": 0
+    },
+    {
+      "key": "gateadmin",
+      "name": "Administer Quality Gates",
+      "description": "Ability to perform any action on the quality gates.",
+      "usersCount": 2,
+      "groupsCount": 0
+    },
+    {
+      "key": "scan",
+      "name": "Execute Analysis",
+      "description": "Ability to execute analyses, and to get all settings required to perform the analysis, even the secured ones like the scm account password, the jira account password, and so on.",
+      "usersCount": 0,
+      "groupsCount": 2
+    },
+    {
+      "key": "provisioning",
+      "name": "Create Projects",
+      "description": "Ability to initialize project structure before first analysis.",
+      "usersCount": 1,
+      "groupsCount": 1
+    }
+  ]
+}
+
+
+

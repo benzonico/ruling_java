@@ -1,0 +1,46 @@
+{
+  "plugins": [
+    {
+      "key": "abap",
+      "name": "ABAP",
+      "category": "Languages",
+      "description": "Enable analysis and reporting on ABAP projects",
+      "license": "Commercial",
+      "organizationName": "SonarSource",
+      "organizationUrl": "http://www.sonarsource.com",
+      "termsAndConditionsUrl": "http://dist.sonarsource.com/SonarSource_Terms_And_Conditions.pdf",
+      "release": {
+        "version": "3.2",
+        "date": "2015-03-10"
+      },
+      "update": {
+        "status": "COMPATIBLE",
+        "requires": []
+      }
+    },
+    {
+      "key": "android",
+      "name": "Android",
+      "category": "Languages",
+      "description": "Import Android Lint reports.",
+      "license": "GNU LGPL 3",
+      "organizationName": "SonarSource and Jerome Van Der Linden, Stephane Nicolas, Florian Roncari, Thomas Bores",
+      "organizationUrl": "http://www.sonarsource.com",
+      "release": {
+        "version": "1.0",
+        "date": "2014-03-31"
+      },
+      "update": {
+        "status": "COMPATIBLE",
+        "requires": [
+          {
+            "key": "java",
+            "name": "Java",
+            "description": "SonarQube rule engine."
+          }
+        ]
+      }
+    }
+  ],
+  "updateCenterRefresh": "2015-04-24T16:08:36+0200"
+}

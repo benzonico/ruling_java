@@ -1,0 +1,61 @@
+{
+  "organization": "my-org-1",
+  "key": "org.codehaus.sonar:sonar",
+  "id": "ABCD",
+  "name": "Sonarqube",
+  "description": "Open source platform for continuous inspection of code quality",
+  "isFavorite": true,
+  "version": "6.3",
+  "analysisDate": "2016-12-06T11:44:00+0200",
+  "extensions": [
+    {
+      "key": "my_plugin/first_page",
+      "name": "First Page"
+    },
+    {
+      "key": "my_plugin/second_page",
+      "name": "Second Page"
+    }
+  ],
+  "qualityProfiles": [
+    {
+      "key": "qp1",
+      "name": "Sonar Way Java",
+      "language": "java"
+    },
+    {
+      "key": "qp2",
+      "name": "Sonar Way Xoo",
+      "language": "xoo"
+    }
+  ],
+  "qualityGate": {
+    "key": "BCDE",
+    "name": "Sonar way",
+    "isDefault": false
+  },
+  "configuration": {
+    "showSettings": true,
+    "showQualityProfiles": true,
+    "showQualityGates": true,
+    "showManualMeasures": true,
+    "showLinks": true,
+    "showPermissions": true,
+    "showHistory": true,
+    "showUpdateKey": true,
+    "showBackgroundTasks": true,
+    "extensions": [
+      {
+        "key": "my_plugin/admin_page",
+        "name": "Admin Page"
+      }
+    ]
+  },
+  "breadcrumbs": [
+    {
+      "key": "org.codehaus.sonar:sonar",
+      "name": "Sonarqube",
+      "qualifier": "TRK"
+    }
+  ]
+}

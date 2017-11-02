@@ -1,0 +1,16 @@
+{
+  "components": [
+    {
+      "organization": "my-org-1",
+      "key": "FileLinkedToModule"
+    },
+    {
+      "organization": "my-org-1",
+      "key": "ModuleHavingFile"
+    },
+    {
+      "organization": "my-org-1",
+      "key": "ProjectHavingModule"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "issues": [
+    {
+      "key": "82fd47d4-b650-4037-80bc-7b112bd4eac2",
+      "component": "FILE_KEY",
+      "project": "PROJECT_KEY",
+      "rule": "xoo:x1",
+      "status": "OPEN",
+      "severity": "MAJOR",
+      "effort": "10min",
+      "assignee": "john"
+    }
+  ],
+  "facets": [
+    {
+      "property": "assignees",
+      "values": [
+        {
+          "val": "john",
+          "count": 1
+        },
+        {
+          "val": "alice",
+          "count": 1
+        },
+        {
+          "val": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "property": "assigned_to_me",
+      "values": [
+        {
+          "val": "john",
+          "count": 1
+        }
+      ]
+    }
+  ]}

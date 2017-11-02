@@ -1,0 +1,19 @@
+{
+  "results":
+  [
+    {
+      "id": "DEFA",
+      "key": "KEY_DEFA",
+      "name": "Project Four",
+      "selected": true
+    },
+    {
+      "uuid": "ABCD",
+      "key": "KEY_ABCD",
+      "name": "Project One",
+      "selected": true
+    }
+  ],
+
+  "more": true
+}

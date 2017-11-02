@@ -1,0 +1,15 @@
+{
+  "organization": "my-org",
+  "key": "polop",
+  "id": "abcd",
+  "name": "Polop",
+  "description": "test project",
+  "isFavorite": true,
+  "breadcrumbs": [
+    {
+      "key": "polop",
+      "name": "Polop",
+      "qualifier": "TRK"
+    }
+  ]
+}
