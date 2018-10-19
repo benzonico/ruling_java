@@ -881,7 +881,7 @@
         <groupId>com.oracle</groupId>
         <artifactId>ojdbc6</artifactId>
         <!-- SonarSource internal tests: -->
-        <!-- This version should be the same as at http://infra.internal.sonarsource.com/jenkins/orch-oracle*.properties -->
+        <!-- This version should be the same as at https://repox.sonarsource.com/orchestrator-properties/orch-oracle*.properties -->
         <version>12.2.0.1.0</version>
       </dependency>
       <dependency>
