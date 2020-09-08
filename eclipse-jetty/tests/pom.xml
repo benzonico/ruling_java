@@ -61,13 +61,9 @@
   <modules>
     <module>jetty-jmh</module>
     <module>jetty-http-tools</module>
-    <module>test-webapps</module>
     <module>test-sessions</module>
     <module>test-loginservice</module>
-    <module>test-integration</module>
-    <module>test-quickstart</module>
     <module>test-jmx</module>
     <module>test-http-client-transport</module>
-    <module>test-distribution</module>
   </modules>
 </project>

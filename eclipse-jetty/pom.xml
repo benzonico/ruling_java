@@ -107,8 +107,6 @@
     <module>jetty-util-ajax</module>
     <module>apache-jsp</module>
     <module>apache-jstl</module>
-    <module>jetty-maven-plugin</module>
-    <module>jetty-jspc-maven-plugin</module>
     <module>jetty-deploy</module>
     <module>jetty-start</module>
     <module>jetty-plus</module>
@@ -130,13 +128,10 @@
     <module>tests</module>
     <module>examples</module>
     <module>jetty-quickstart</module>
-    <module>jetty-distribution</module>
     <module>jetty-runner</module>
     <module>jetty-http-spi</module>
     <module>jetty-osgi</module>
     <module>jetty-alpn</module>
-    <module>jetty-home</module>
-    <module>jetty-bom</module>
     <module>jetty-documentation</module>
   </modules>
 

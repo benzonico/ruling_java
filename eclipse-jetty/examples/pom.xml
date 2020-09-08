@@ -59,6 +59,5 @@
     - new ones should appear nested under o.e.jetty.examples groupId
     -->
     <module>async-rest</module>
-    <module>embedded</module>
   </modules>
 </project>
