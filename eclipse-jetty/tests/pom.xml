@@ -59,11 +59,6 @@
     </pluginManagement>
   </build>
   <modules>
-    <module>jetty-jmh</module>
     <module>jetty-http-tools</module>
-    <module>test-sessions</module>
-    <module>test-loginservice</module>
-    <module>test-jmx</module>
-    <module>test-http-client-transport</module>
   </modules>
 </project>
