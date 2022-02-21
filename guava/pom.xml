@@ -18,6 +18,9 @@
     Guava has only one code dependency - javax.annotation,
     per the JSR-305 spec.
   </description>
+  <properties>
+    <java.version>1.6</java.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>com.google.code.findbugs</groupId>
@@ -45,6 +48,38 @@
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+        <!-- force java version compatibility to be able to execute sonar-java ruling and be compatible with JDK 17 -->
+        <artifactId>maven-compiler-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>default-compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+            <configuration>
+              <source>${java.version}</source>
+              <target>${java.version}</target>
+            </configuration>
+          </execution>
+          <execution>
+            <id>default-testCompile</id>
+            <phase>test-compile</phase>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
+            <configuration>
+              <source>${java.version}</source>
+              <target>${java.version}</target>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
       <plugin>
         <extensions>true</extensions>
         <groupId>org.apache.felix</groupId>
