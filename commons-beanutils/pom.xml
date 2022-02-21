@@ -58,6 +58,8 @@
     <commons.release.isDistModule>true</commons.release.isDistModule>
     <commons.releaseManagerName>Gary Gregory</commons.releaseManagerName>
     <commons.releaseManagerKey>86fdc7e2a11262cb</commons.releaseManagerKey>
+    <!-- explicitly declare version so it can be overriden-->
+    <maven-bundle-plugin.version>4.1.0</maven-bundle-plugin.version>
   </properties>
 
   <issueManagement>
@@ -393,6 +395,11 @@
       </plugins>
       <pluginManagement>
         <plugins>
+          <plugin>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>maven-bundle-plugin</artifactId>
+            <version>${maven-bundle-plugin.version}</version>
+          </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-scm-publish-plugin</artifactId>
